@@ -18,7 +18,7 @@ class PageInfo: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setMyValues()
         // Do any additional setup after loading the view.
     }
 
@@ -28,7 +28,9 @@ class PageInfo: UIViewController {
     }
     
     func setMyValues(){
-        print(PageName.text)
+        PageName.text = contactDetail[0]
+        PageAddress.text = contactDetail[1]
+        PagePhone.text = contactDetail[2]
  
     }
     

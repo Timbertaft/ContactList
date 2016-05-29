@@ -23,17 +23,12 @@ var x : Array<Array<String>> = [[]]
 
     func loadContacts()
     {
-        var jsonData = NSData(contentsOfFile: "Users/student/Documents/data.json")
+        let jsonData = NSData(contentsOfFile: "Users/student/Documents/data.json")
         
         do{
             
             let json = try NSJSONSerialization.JSONObjectWithData(jsonData!, options:NSJSONReadingOptions(rawValue: 0)) as? NSDictionary
             
-            print("It worked")
-            
-            print(json!.allKeys)
-            print(json!["cols"] as! Array<String>)
-            print(json!["data"] as! Array<Array<String>>)
             x = (json!["data"] as! Array<Array<String>>)
             
             
@@ -118,7 +113,6 @@ var x : Array<Array<String>> = [[]]
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destVC = segue.destinationViewController as? PageInfo {
             destVC.contactDetail = x[tableView.indexPathForSelectedRow!.row]
-            destVC.setMyValues()
         }
             
             
