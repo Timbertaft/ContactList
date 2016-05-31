@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rw7-aj-W3A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rw7-aj-W3A">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Contact List-->
@@ -71,26 +72,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-cv-Krn">
-                                <rect key="frame" x="44" y="111" width="505" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="387-eh-F7Z">
+                                <rect key="frame" x="37" y="265" width="526" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="387-eh-F7Z">
-                                <rect key="frame" x="44" y="150" width="526" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghH-0J-bfS">
+                                <rect key="frame" x="43" y="300" width="515" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghH-0J-bfS">
-                                <rect key="frame" x="44" y="195" width="515" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFs-cv-Krn">
+                                <rect key="frame" x="279" y="231" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Z5R-iL-paB">
+                                <rect key="frame" x="205" y="81" width="191" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="191" id="1ta-H4-oGC"/>
+                                    <constraint firstAttribute="height" constant="135" id="B0M-yy-92o"/>
+                                    <constraint firstAttribute="width" constant="191" id="J5B-l8-R8E"/>
+                                    <constraint firstAttribute="height" constant="135" id="xZ5-hS-WbS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="J5B-l8-R8E"/>
+                                        <exclude reference="xZ5-hS-WbS"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z5R-iL-paB" firstAttribute="centerX" secondItem="yNa-IM-qf6" secondAttribute="centerX" id="1VK-29-3TG"/>
+                            <constraint firstItem="Z5R-iL-paB" firstAttribute="top" secondItem="nk3-Dn-5Sq" secondAttribute="bottom" constant="17" id="2g9-xd-ort"/>
+                            <constraint firstItem="387-eh-F7Z" firstAttribute="top" secondItem="TFs-cv-Krn" secondAttribute="bottom" constant="13" id="7hz-0Z-7ua"/>
+                            <constraint firstItem="387-eh-F7Z" firstAttribute="centerX" secondItem="Z5R-iL-paB" secondAttribute="centerX" id="EuL-m2-jvK"/>
+                            <constraint firstItem="387-eh-F7Z" firstAttribute="centerX" secondItem="ghH-0J-bfS" secondAttribute="centerX" id="ILT-oj-ySK"/>
+                            <constraint firstItem="ghH-0J-bfS" firstAttribute="top" secondItem="387-eh-F7Z" secondAttribute="bottom" constant="14" id="Rdu-hX-Gg6"/>
+                            <constraint firstItem="Z5R-iL-paB" firstAttribute="centerX" secondItem="yNa-IM-qf6" secondAttribute="centerX" id="UPb-7r-cww"/>
+                            <constraint firstItem="387-eh-F7Z" firstAttribute="centerX" secondItem="TFs-cv-Krn" secondAttribute="centerX" id="YSm-h1-G8i"/>
+                            <constraint firstItem="ghH-0J-bfS" firstAttribute="leading" secondItem="yNa-IM-qf6" secondAttribute="leadingMargin" constant="23" id="drc-ik-eV2"/>
+                            <constraint firstItem="387-eh-F7Z" firstAttribute="leading" secondItem="yNa-IM-qf6" secondAttribute="leadingMargin" constant="17" id="eyF-Ci-ZAp"/>
+                            <constraint firstItem="TFs-cv-Krn" firstAttribute="top" secondItem="Z5R-iL-paB" secondAttribute="bottom" constant="15" id="jFl-t1-iWg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UPb-7r-cww"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="PageAddress" destination="387-eh-F7Z" id="ld0-cZ-9AA"/>
@@ -119,4 +153,7 @@
             <point key="canvasLocation" x="878" y="155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="333" height="200"/>
+    </resources>
 </document>
